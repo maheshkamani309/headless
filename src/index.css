@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    vertical-align: middle;
+    background: #000000bd;
+}
+
+.loading-spinner {
+    width: 5vh;
+    height: 5vh;
+    border: 1vh solid #f3f3f3;
+    border-top: 1vh solid #383636;
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+    margin: 45vh auto;
+}
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #52c576;
+    --white-color: #fff;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 22px;
+}
+
+.nav-links {
+    font-size: 25px;
+}
+
+.nav-links a.active {
+    color: var(--secondary-color);
+}
+
+a:hover {
+    color: #52c576;
+}
+
+.body-copy p {
+    margin-bottom: 20px;
+}
+
+.font-500 {
+    font-family: 'Caveat', cursive;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Caveat', cursive;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.secondry-text-color {
+    color: var(--secondary-color);
+}
+
+.text-white {
+    color: var(--white-color);
+}
+
+.text-black {
+    color: #000;
+}
+
+.primary-background {
+    background-color: var(--primary-color);
+}
+
+.secondry-background {
+    background-color: var(--secondary-color);
+}
+
+.secondry-border-color {
+    border-color: var(--secondary-color);
+}
+
+.hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1520085601670-ee14aa5fa3e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    position: relative;
+}
+
+.hero-bg::before {
+    background: #000000bf;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.transpren-bg {
+    background: #000000bf;
+
+}
+
+.transpren-bg-green {
+    background: #52c57670;
+
+}
+
+.show-menu-nav.hide-menu-nav {
+    right: -300px;
+}
+
+.show-menu-nav {
+    position: fixed;
+    top: 0px;
+    background: #000;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+}
